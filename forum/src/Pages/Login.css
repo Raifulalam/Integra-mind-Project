@@ -1,0 +1,153 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cfe3f8dd;
+    margin: 0%;
+    padding: 0%;
+
+}
+
+.login-container,
+.forgot-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 100vh;
+    padding: 0;
+    margin: 0%;
+
+
+}
+
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 8px;
+}
+
+.forgot-link {
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+
+
+}
+
+.register-link {
+    color: #4CAF50;
+
+
+}
+
+.login-button:hover {
+    background-color: #44b948e4;
+
+    transition: all ease 0.4s;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+
+
+}
+
+
+.login-form,
+.forgot-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgba(127, 255, 212, 0.334);
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+
+
+
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-top: 0%;
+}
+
+p {
+    margin: 0%;
+    padding: 0%;
+    text-align: justify;
+}
+
+
+.login-profile .bi {
+    color: #fff;
+    border: 2px solid black;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #000000;
+    margin: 0%;
+
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+
+}
+
+
+
+
+input {
+
+    color: rgb(40, 32, 32);
+    padding: 8px 20px;
+    border-radius: 4px;
+    border: none;
+    width: 85%;
+}
+
+.checkbox {
+    margin: 0%;
+    padding: 0%;
+    margin-left: 10px;
+    width: 15px;
+
+
+}
+
+.email-input {
+    margin-bottom: 12px;
+
+}
+
+@media (max-width: 768px) {
+
+    .login-container,
+    .forgot-container {
+        width: 100%;
+    }
+
+    .buttons {
+        width: 100%;
+        gap: 40px;
+    }
+
+    .login-form,
+    .forgot-form {
+        padding: 10px;
+    }
+}
