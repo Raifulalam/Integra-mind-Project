@@ -10,7 +10,8 @@ body {
 }
 
 .login-container,
-.forgot-container {
+.forgot-container,
+.register-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +23,8 @@ body {
 
 }
 
-.login-button {
+.login-button,
+.send-linkBtn {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -30,6 +32,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     margin: 8px;
+    margin-top: 20px;
 }
 
 .forgot-link {
@@ -42,29 +45,30 @@ body {
 
 }
 
+
+
 .register-link {
     color: #4CAF50;
 
-
 }
 
-.login-button:hover {
-    background-color: #44b948e4;
+.login-button:hover,
+.send-linkBtn:hover {
+    background-color: #58cd5ce4;
 
-    transition: all ease 0.4s;
+    transition: all ease 0.8s;
 }
 
 .buttons {
     display: flex;
     justify-content: space-between;
     padding: 10px 0px;
-
-
 }
 
 
 .login-form,
-.forgot-form {
+.forgot-form,
+.register-form {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -73,10 +77,8 @@ body {
     background-color: rgba(127, 255, 212, 0.334);
     border-radius: 8px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-
-
-
 }
+
 
 .login-form h2 {
     text-align: center;
@@ -112,15 +114,19 @@ p {
 
 
 input {
-
+    background: transparent;
     color: rgb(40, 32, 32);
-    padding: 8px 20px;
-    border-radius: 4px;
+    padding: 10px 20px;
+    padding-bottom: 0;
     border: none;
     width: 85%;
+    outline: none;
+    font-size: 14px;
+    font-family: sans-serif;
 }
 
 .checkbox {
+
     margin: 0%;
     padding: 0%;
     margin-left: 10px;
@@ -150,4 +156,59 @@ input {
     .forgot-form {
         padding: 10px;
     }
+}
+
+
+
+.register-form input {
+
+    background: transparent;
+    padding-bottom: 0;
+    border-radius: 0;
+    padding-top: 12px;
+    outline: none;
+    font-size: 14px;
+    font-family: sans-serif;
+
+}
+
+
+
+.register-form input:active {
+    border: none;
+}
+
+.username,
+.email,
+.password {
+    display: flex;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.bi {
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+
+.register-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+    cursor: pointer;
+    margin-top: 12px;
+
+}
+
+.register-button:hover {
+    background-color: #58cd5ce4;
+
+    transition: all ease 0.8s;
 }
