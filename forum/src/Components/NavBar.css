@@ -5,6 +5,9 @@
     padding: 1rem;
     background-color: #333;
     color: #fff;
+    position: relative;
+    text-align: center;
+
 }
 
 .nav-logo {
@@ -19,6 +22,7 @@
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 .nav-links li,
@@ -51,20 +55,18 @@
 }
 
 @media (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .navbar-nav li {
-        margin-right: 0;
-    }
+
 
     .navbar-toggle {
         display: block;
     }
 
     .nav-links {
+        display: none;
+    }
+
+    .nav-logo {
         display: none;
     }
 }
@@ -77,4 +79,11 @@
 .navbar-content.show {
     display: block;
     /* show navbar content when showNav is true */
+}
+
+
+
+.userProfile {
+    border-radius: 50%;
+    width: 100px;
 }

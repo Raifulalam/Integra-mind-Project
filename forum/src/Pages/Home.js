@@ -1,8 +1,15 @@
-const Home = () => {
-    return (
-        <div className="home-container">
-            <h1>Welcome to the Home Page</h1>
-        </div>)
-}
+// src/UserHomePage.js
+import React, { useState } from 'react';
+// Optional: For styling
 
-export default Home;
+const UserHomePage = () => {
+    // State to manage the visibility of the profile
+
+
+    return (
+
+        <></>
+    );
+};
+
+export default UserHomePage;

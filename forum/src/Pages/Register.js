@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 
 const Register = () => {
     const navigate = useNavigate();
+    const [firstname, setFirstname] = useState('');
+    const [lastname, setLastname] = useState('');
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [username, setUsername] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
@@ -16,26 +20,26 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // if (password !== confirmPassword) {
-        //     setError("Passwords do not match.");
-        //     return;
-        // }
-        // try {
-        //     const response = await axios.post('http://localhost:5000/register', {
-        //         email,
-        //         password
-        //     });
-        //     if (response.data.success) {
-        //         alert("Registration successful! You can now log in.");
-        //         setError('')
-        //         navigate('/'); // Redirect to login page
-        //     } else {
-        //         setError(response.data.message);
+        if (password !== confirmPassword) {
+            setError("Passwords do not match.");
+            return;
+        }
+        try {
+            const response = await axios.post('http://localhost:5000/register', {
+                email,
+                password
+            });
+            if (response.data.success) {
+                alert("Registration successful! You can now log in.");
+                setError('')
+                navigate('/'); // Redirect to login page
+            } else {
+                setError(response.data.message);
 
-        //     }
-        // } catch (error) {
-        //     setError('Something went wrong 😓');
-        // }
+            }
+        } catch (error) {
+            setError('Something went wrong 😓');
+        }
     };
 
     return (
@@ -51,9 +55,9 @@ const Register = () => {
                             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                         </svg>
                         <input
-                            type="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            type="text"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
                             required
                             placeholder='Username'
                         />

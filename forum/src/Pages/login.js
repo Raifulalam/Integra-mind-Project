@@ -1,9 +1,11 @@
 
 // src/Login.js
 import React, { useState } from 'react';
-
+import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
+// import { useAuth } from './AuthContext';
+
 
 
 const Login = () => {
@@ -14,21 +16,21 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // try {
-        //     const response = await axios.post('http://localhost:5000/login', {
-        //         email,
-        //         password
-        //     });
+        try {
+            const response = await axios.post('http://localhost:5000/login', {
+                email,
+                password
+            });
 
-        //     if (response.data.success) {
-        //         // Redirect to the weather app 
-        //         navigate('/weatherApp', { state: { email } });
-        //     } else {
-        //         setError(response.data.message);
-        //     }
-        // } catch (error) {
-        //     setError('Something went wrong 😓');
-        // }
+            if (response.data.success) {
+                // Redirect to the weather app 
+                navigate('/navbar', { state: { email } });
+            } else {
+                setError(response.data.message);
+            }
+        } catch (error) {
+            setError('Something went wrong 😓');
+        }
     };
 
     return (
