@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
-// import { useAuth } from './AuthContext';
+
 
 
 
@@ -23,10 +23,10 @@ const Login = () => {
             });
 
             if (response.data.success) {
-                // Redirect to the weather app 
                 navigate('/navbar', { state: { email } });
             } else {
                 setError(response.data.message);
+
             }
         } catch (error) {
             setError('Something went wrong 😓');

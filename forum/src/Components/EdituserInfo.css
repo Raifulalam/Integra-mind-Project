@@ -1,0 +1,87 @@
+.editUserInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    background: #6773a18a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0% 30%;
+
+}
+
+body {
+    background-color: #33395add;
+
+}
+
+
+
+.editUserInfo h2 {
+    margin-bottom: 2px;
+}
+
+.editUserInfo form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+
+    padding: 10px;
+
+
+}
+
+.editUserInfo textarea {
+    width: 100%;
+    outline: none;
+    background: transparent;
+}
+
+.editUserInfo label {
+    font-weight: 500;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.editUserInfo input[type="text"],
+.editUserInfo input[type="email"],
+.editUserInfo input[type="password"],
+.editUserInfo input[type="number"],
+.editUserInfo input[type="date"] {
+
+    width: 500px;
+    border-bottom: 2px solid #ccc;
+    margin: 0%;
+    outline: none;
+
+
+}
+
+.editUserInfo input[type="file"] {
+    border: none;
+    background: transparent;
+}
+
+.editUserInfo select {
+    width: 500px;
+    padding: 6px;
+    background: transparent;
+
+}
+
+.submitBtn {
+    width: 100%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background-color: #3e8e41;
+}

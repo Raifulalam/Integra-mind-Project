@@ -9,6 +9,7 @@ import Contact from './Pages/Contact';
 import Login from './Pages/login';
 import ForgotPassword from './Pages/Forgot';
 import Register from './Pages/Register';
+import EditUserInfo from './Components/EditUser';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/edituser" element={<EditUserInfo />} />
 
       </Routes>
     </Router>

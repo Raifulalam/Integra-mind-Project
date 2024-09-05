@@ -33,7 +33,9 @@ function NavBar() {
         navigate('/')
 
     };
-
+    const visitUser = () => {
+        navigate('/edituser')
+    }
     return (
         <>
 
@@ -80,12 +82,11 @@ function NavBar() {
                 <div className="user-home-page">
                     {isProfileVisible && (
                         <div className="profile-info">
-                            <img src={Userimage} className='userProfile'></img>
+                            <img src={Userimage} className='userProfile' onClick={visitUser}></img>
                             <h2> {userProfile.username}</h2>
                             <div className='userDetails'>
                                 <p><strong>Username:</strong></p>
                                 <p><strong>Email:</strong> {userProfile.email}</p>
-
                             </div>
 
                             <button className="logout-button" onClick={handleLogout}>Logout</button>
